@@ -126,19 +126,19 @@ h1 {
   text-align: center;
 }
 
-/* CHEAT BUTTON CONTAINER */
+/* CHEAT BUTTONS GRID — TOMBOL RAPAT 3 PER BARIS DAN TENGAH KALAU SISA */
 .cheat-buttons {
   display: grid;
   grid-template-columns: repeat(3, minmax(180px, 1fr));
   gap: 20px 24px;
-  justify-content: center;
+  place-items: center;
   margin-top: 20px;
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* CHEAT BUTTONS */
+/* CHEAT BUTTON STYLING */
 .cheat-buttons button {
   background-color: #a259ff;
   color: white;
@@ -166,9 +166,11 @@ h1 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* FOOTER TENGAH */
+/* FOOTER DI TENGAH TOTAL */
 .footer {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin-top: 60px;
   font-size: 14px;
   opacity: 0.8;
