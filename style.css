@@ -110,48 +110,50 @@ h1 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* JUDUL SECTION ala PIN KONZ */
+/* SECTION TITLE — Mirip PIN Konz */
 .section-title {
   background-color: #ffbf00;
   color: black;
-  padding: 6px 12px;
+  padding: 6px 18px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
   display: inline-block;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 22px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.35);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
-/* CHEAT BUTTONS */
+/* CHEAT BUTTON CONTAINER */
 .cheat-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px 24px;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 20px 24px;
   justify-content: center;
   margin-top: 20px;
-  max-width: 600px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* CHEAT BUTTONS */
 .cheat-buttons button {
   background-color: #a259ff;
   color: white;
-  padding: 14px 16px;
+  padding: 16px 20px;
   border: none;
-  border-radius: 8px;
-  font-size: 14.5px;
+  border-radius: 10px;
+  font-size: 15px;
   font-weight: 600;
-  box-shadow: 0 4px 0 #752fcc;
+  box-shadow: 0 5px 0 #752fcc;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 
   width: 100%;
   max-width: 180px;
-  height: 48px;
+  height: 50px;
 
   text-align: center;
   white-space: nowrap;
@@ -161,5 +163,14 @@ h1 {
 
 .cheat-buttons button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* FOOTER TENGAH */
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  opacity: 0.8;
+  color: white;
 }
