@@ -1,7 +1,7 @@
-// Cheat button list — tinggal kamu tambahkan nanti
+// Cheat list kamu
 const cheats = [
-  { name: "🤖 Jawaban Otomatis", path: "cheats/JawabanOtomatis.js" },
-  { name: "💰 Tambah Token", path: "cheats/TambahToken.js" }
+  { name: "Jawaban Otomatis", path: "cheats/JawabanOtomatis.js" },
+  { name: "Tambah Token", path: "cheats/TambahToken.js" }
 ];
 
 function createButtons() {
