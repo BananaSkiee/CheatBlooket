@@ -1,43 +1,108 @@
-const globalCheats = [
-  { name: "Selalu Tiga Kali Lipat", path: "cheats/SelaluTigaKaliLipat.js" },
-  { name: "Tebakan Otomatis", path: "cheats/TebakanOtomatis.js" },
-  { name: "Kata Sandi ESP", path: "cheats/KataSandiESP.js" },
-  { name: "Hapus Peretasan", path: "cheats/HapusPeretasan.js" },
-  { name: "Pilihan ESP", path: "cheats/PilihanESP.js" },
-  { name: "Tetapkan Kripto", path: "cheats/TetapkanKripto.js" },
-  { name: "Atur Kata Sandi", path: "cheats/AturKataSandi.js" },
-  { name: "Mencuri Pemain Crypto", path: "cheats/MencuriCrypto.js" }
-];
+const cheatData = {
+  global: [
+    { name: "Kosong", path: "Global/kosong.js" }
+  ],
+  bajak: [
+    { name: "Kosong", path: "Bajak/kosong.js" }
+  ],
+  emas: [
+    { name: "Kosong", path: "Emas/kosong.js" }
+  ],
+  kafe: [
+    { name: "Kosong", path: "Kafe/kosong.js" }
+  ],
+  kripto: [
+    { name: "Kosong", path: "Kripto/kosong.js" }
+  ],
+  dinosaurus: [
+    { name: "Kosong", path: "Dinosaurus/kosong.js" }
+  ],
+  penipu: [
+    { name: "Kosong", path: "Penipu/kosong.js" }
+  ],
+  menara: [
+    { name: "Kosong", path: "Menara/kosong.js" }
+  ],
+  menara2: [
+    { name: "Kosong", path: "Menara2/kosong.js" }
+  ],
+  pabrik: [
+    { name: "Kosong", path: "Pabrik/kosong.js" }
+  ],
+  kegilaan: [
+    { name: "Kosong", path: "Kegilaan/kosong.js" }
+  ],
+  memancing: [
+    { name: "Kosong", path: "Memancing/kosong.js" }
+  ],
+  flappy: [
+    { name: "Kosong", path: "Flappy/kosong.js" }
+  ],
+  malapetaka: [
+    { name: "Kosong", path: "Malapetaka/kosong.js" }
+  ],
+  kerajaan: [
+    { name: "Kosong", path: "Kerajaan/kosong.js" }
+  ],
+  balap: [
+    { name: "Kosong", path: "Balap/kosong.js" }
+  ],
+  royale: [
+    { name: "Kosong", path: "Royale/kosong.js" }
+  ],
+  rush: [
+    { name: "Kosong", path: "Rush/kosong.js" }
+  ],
+  monster: [
+    { name: "Kosong", path: "Monster/kosong.js" }
+  ],
+  santa: [
+    { name: "Kosong", path: "Santa/kosong.js" }
+  ]
+};
 
-const guiCheats = [
-  { name: "Gui", path: "cheats/Gui.js" },
-  { name: "GUI Seluler", path: "cheats/GUISeluler.js" },
-  { name: "K Gui", path: "cheats/KGui.js" },
-  { name: "React GUI", path: "cheats/ReactGui.js" }
-];
+function showCategory(category) {
+  const cheatContainer = document.getElementById("cheat-buttons");
+  const title = document.getElementById("judul-kategori");
+  cheatContainer.innerHTML = "";
 
-function createButtons(id, cheatList) {
-  const container = document.getElementById(id);
-  cheatList.forEach(cheat => {
+  const cheats = cheatData[category];
+  if (!cheats) return;
+
+  cheats.forEach(cheat => {
     const btn = document.createElement("button");
     btn.textContent = cheat.name;
     btn.onclick = () => copyCheat(cheat.path);
-    container.appendChild(btn);
+    cheatContainer.appendChild(btn);
   });
+
+  title.textContent = "Cheat " + capitalize(category);
 }
 
 async function copyCheat(path) {
   try {
     const res = await fetch(path);
-    if (!res.ok) throw new Error("Gagal ambil file: " + res.status);
+    if (!res.ok) throw new Error("Gagal ambil file");
     const code = await res.text();
     await navigator.clipboard.writeText(code);
-    alert("✅ Cheat berhasil disalin ke clipboard!");
+    alert("✅ Cheat disalin ke clipboard!");
   } catch (err) {
     alert("❌ Gagal salin cheat:\n" + err.message);
-    console.error(err);
   }
 }
 
-createButtons("cheat-buttons-global", globalCheats);
-createButtons("cheat-buttons-gui", guiCheats);
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Sidebar menu handler
+const sidebarItems = document.querySelectorAll("#sidebar-menu li");
+sidebarItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const kategori = item.getAttribute("data-kategori");
+    showCategory(kategori);
+  });
+});
+
+// Tampilkan cheat "global" saat pertama kali load
+showCategory("global");
