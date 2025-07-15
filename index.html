@@ -1,72 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cheat by Andra 9.2</title>
   <meta charset="UTF-8">
-  <style>
-    body {
-      background-color: #0f0f0f;
-      color: #fff;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #00e0ff;
-    }
-    h2 {
-      margin-top: 40px;
-      color: #0bc2cf;
-      border-bottom: 1px solid #333;
-      padding-bottom: 5px;
-    }
-    button {
-      background-color: #0bc2cf;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #099aaa;
-    }
-  </style>
+  <title>CheatBy Andra 9.2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Cheat by Andra 9.2</h1>
-  <p>Klik tombol di bawah untuk menyalin cheat ke clipboard:</p>
-
-  <!-- GLOBAL SECTION -->
-  <h2>📁 Global</h2>
-  <button onclick="copyCheat('Global/JawabanOtomatis.js')">🤖 Jawaban Otomatis</button>
-  <button onclick="copyCheat('Global/TambahToken.js')">💰 Tambah Token</button>
-
-  <!-- GAMEMODE SECTION -->
-  <h2>📁 GameMode</h2>
-  <button onclick="copyCheat('GameMode/TowerDefenseBoost.js')">🏰 Tower Defense Boost</button>
-  <button onclick="copyCheat('GameMode/CryptoHack.js')">💣 Crypto Hack</button>
-
-  <!-- OTHER SECTION -->
-  <h2>📁 Other</h2>
-  <button onclick="copyCheat('Other/SpamBox.js')">🔁 Spam Box</button>
-  <button onclick="copyCheat('Other/AutoXP.js')">✨ Auto XP</button>
-
-  <script>
-    async function copyCheat(path) {
-      try {
-        const res = await fetch(path);
-        if (!res.ok) throw new Error("Gagal fetch: " + res.status);
-        const code = await res.text();
-        await navigator.clipboard.writeText(code);
-        alert("✅ Cheat berhasil disalin ke clipboard!");
-      } catch (err) {
-        alert("❌ Gagal salin cheat:\n" + err.message);
-        console.error(err);
-      }
-    }
-  </script>
+  <div class="container">
+    <h1>CheatBy Andra 9.2</h1>
+    <p>Klik tombol untuk menyalin cheat:</p>
+    <div id="cheat-buttons">
+      <!-- Tombol cheat akan ditambahkan otomatis lewat script.js -->
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
