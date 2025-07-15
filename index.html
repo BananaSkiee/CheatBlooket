@@ -2,39 +2,35 @@
 <html>
 <head>
   <title>Cheat by Andra 9.2</title>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <style>
     body {
-      background-color: #0e0e0e;
+      background-color: #0f0f0f;
       color: #fff;
       font-family: sans-serif;
       text-align: center;
-      padding-top: 50px;
-    }
-    h1 {
-      color: #00e0ff;
+      padding: 50px;
     }
     button {
-      padding: 10px 20px;
-      margin: 10px;
-      background: #0bc2cf;
+      background-color: #0bc2cf;
       color: white;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 16px;
     }
     button:hover {
-      background: #099aaa;
+      background-color: #099aaa;
     }
   </style>
 </head>
 <body>
   <h1>Cheat by Andra 9.2</h1>
-  <p>Klik untuk menyalin cheat ke clipboard:</p>
+  <p>Klik untuk menyalin cheat:</p>
 
-  <!-- Tambah tombol di sini -->
-  <button onclick="copyCheat('Global/JawabanOtomatis.js')">🤖 Auto Jawab</button>
+  <button onclick="copyCheat('Global/JawabanOtomatis.js')">🤖 Jawaban Otomatis</button>
 
   <script>
     async function copyCheat(path) {
@@ -45,7 +41,7 @@
         await navigator.clipboard.writeText(code);
         alert("✅ Cheat berhasil disalin ke clipboard!");
       } catch (err) {
-        alert("❌ Gagal:\n" + err.message);
+        alert("❌ Gagal salin cheat:\n" + err.message);
         console.error(err);
       }
     }
