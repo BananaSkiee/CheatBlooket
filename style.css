@@ -83,7 +83,6 @@ body {
   font-weight: 500;
 }
 
-/* SIDEBAR ACTIVE */
 #sidebar-menu li.active {
   background-color: #6d28d9;
   box-shadow: 0 0 0 2px #fff;
@@ -101,7 +100,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* CHEAT SECTION */
+/* SECTION CHEATS */
 .cheat-section {
   display: none;
   background-color: #3b0a52;
@@ -111,23 +110,25 @@ h1 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* SECTION TITLE */
+/* JUDUL SECTION ala PIN KONZ */
 .section-title {
-  background-color: #ffa500;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: bold;
+  background-color: #ffbf00;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
   display: inline-block;
-  box-shadow: 0 4px 0 #cc8400;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* CHEAT BUTTONS */
 .cheat-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 14px;
   justify-items: center;
   align-items: start;
@@ -137,22 +138,23 @@ h1 {
 .cheat-buttons button {
   background-color: #a259ff;
   color: white;
-  padding: 12px 18px;
+  padding: 8px 12px;
   border: none;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  box-shadow: 0 4px 0 #752fcc;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  box-shadow: 0 3px 0 #752fcc;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.15s ease-in-out;
+
+  width: 100%;
+  max-width: 150px;
+  height: 40px;
 
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
-  max-width: 180px;
-  height: 44px;
 }
 
 .cheat-buttons button:hover {
