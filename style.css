@@ -22,6 +22,9 @@ body {
   width: 230px;
   padding: 20px;
   overflow-y: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .sidebar h2 {
@@ -31,11 +34,19 @@ body {
 
 .discord-btn {
   background-color: #3b82f6;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 8px;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.discord-btn:hover {
+  background-color: #2563eb;
 }
 
 .sidebar ul {
@@ -73,9 +84,10 @@ h1 {
   background-color: #f59e0b;
   color: black;
   display: inline-block;
-  padding: 5px 15px;
+  padding: 6px 18px;
   border-radius: 5px;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .cheat-buttons {
@@ -93,9 +105,18 @@ h1 {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .cheat-buttons button:hover {
   background-color: #9333ea;
+  transform: scale(1.05);
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #e5e7eb;
+  font-size: 14px;
+  padding: 10px 0;
 }
