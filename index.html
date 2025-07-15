@@ -40,8 +40,7 @@
 
       <!-- Semua section cheat, hanya satu ditampilkan sesuai kategori aktif -->
 <section class="cheat-section" data-kategori="global">
-  <h2 class="section-title">Global Cheats
-Antarmuka</h2>
+  <h2 class="section-title">Global Cheats</h2>
   <div class="cheat-buttons">
     <button onclick="copyCheat('Global/JawabanOtomatis.js')">Jawaban Otomatis</button>
   </div>
@@ -188,17 +187,24 @@ Antarmuka</h2>
   </div>
 
   <script>
-    async function copyCheat(path) {
-      try {
-        const res = await fetch(path);
-        if (!res.ok) throw new Error("Gagal ambil file");
-        const text = await res.text();
-        await navigator.clipboard.writeText(text);
-        alert("✅ Cheat disalin ke clipboard!");
-      } catch (err) {
-        alert("❌ Gagal salin cheat:\n" + err.message);
-      }
-    }
+    async function copyCheat(path, button = null) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) return; // Jangan lakukan apa pun jika file tidak ditemukan
+
+    const text = await res.text();
+    await navigator.clipboard.writeText(text);
+
+    // Hapus class 'copied' dari semua tombol dulu
+    document.querySelectorAll("button").forEach(btn => btn.classList.remove("copied"));
+
+    // Tambahkan class 'copied' ke tombol yang ditekan
+    if (button) button.classList.add("copied");
+
+  } catch (err) {
+    // Tidak tampilkan alert error
+  }
+   }
 
     // Sidebar interaktif
     const sidebarItems = document.querySelectorAll("#sidebar-menu li");
