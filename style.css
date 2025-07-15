@@ -142,3 +142,10 @@ h1 {
   font-size: 14px;
   opacity: 0.8;
 }
+
+button.copied {
+  background-color: #28a745 !important;
+  color: #fff !important;
+  border: none;
+  transition: background-color 0.3s;
+}
