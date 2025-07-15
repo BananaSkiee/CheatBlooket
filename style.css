@@ -159,3 +159,47 @@ button.copied {
   font-size: 14px;
   opacity: 0.8;
 }
+
+.cheat-section {
+  background-color: #3b0a52;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  background-color: #ffa500;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 4px 0 #cc8400;
+  margin-bottom: 20px;
+}
+
+.cheat-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.cheat-buttons button {
+  background-color: #a259ff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 0 #752fcc;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.cheat-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
