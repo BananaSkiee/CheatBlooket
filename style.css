@@ -83,6 +83,12 @@ body {
   font-weight: 500;
 }
 
+/* SIDEBAR ACTIVE */
+#sidebar-menu li.active {
+  background-color: #6d28d9;
+  box-shadow: 0 0 0 2px #fff;
+}
+
 /* MAIN CONTENT */
 .main-content {
   flex: 1;
@@ -152,39 +158,4 @@ button.copied {
   margin-top: 50px;
   font-size: 14px;
   opacity: 0.8;
-}
-
-/* ACTIVE SIDEBAR */
-#sidebar-menu li.active {
-  background-color: #6d28d9;
-  box-shadow: 0 0 0 2px #fff;
-}.cheat-buttons button {
-  background-color: #9f48e3;
-  color: white;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.cheat-buttons button:hover {
-  background-color: #7b2cbf;
-}
-
-button.copied {
-  background-color: #28a745 !important;
-  color: white !important;
-}
-
-.section-title {
-  background-color: #f59e0b;
-  padding: 8px 16px;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-bottom: 15px;
 }
