@@ -128,27 +128,30 @@ h1 {
 /* CHEAT BUTTONS */
 .cheat-buttons {
   display: grid;
-  grid-template-columns: repeat(3, 160px); /* 3 tombol per baris tetap */
-  gap: 16px 24px;
-  justify-content: center; /* Tengahin tombol */
-  margin-top: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px 24px;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cheat-buttons button {
   background-color: #a259ff;
   color: white;
-  padding: 8px 12px;
+  padding: 14px 16px;
   border: none;
-  border-radius: 6px;
-  font-size: 11.5px;
+  border-radius: 8px;
+  font-size: 14.5px;
   font-weight: 600;
-  box-shadow: 0 3px 0 #752fcc;
+  box-shadow: 0 4px 0 #752fcc;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 
   width: 100%;
-  max-width: 150px;
-  height: 40px;
+  max-width: 180px;
+  height: 48px;
 
   text-align: center;
   white-space: nowrap;
@@ -159,18 +162,4 @@ h1 {
 .cheat-buttons button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-button.copied {
-  background-color: #28a745 !important;
-  color: white !important;
-  border: none;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 14px;
-  opacity: 0.8;
 }
