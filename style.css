@@ -104,38 +104,60 @@ h1 {
 /* CHEAT SECTION */
 .cheat-section {
   display: none;
-  background-color: #3b0764;
-  border-radius: 10px;
+  background-color: #3b0a52;
+  border-radius: 12px;
   padding: 20px;
   margin-bottom: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* SECTION TITLE */
 .section-title {
-  font-size: 18px;
-  background-color: #f59e0b;
-  color: black;
-  display: inline-block;
-  padding: 8px 16px;
+  background-color: #ffa500;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 20px;
   font-weight: bold;
-  border-radius: 6px;
-  margin-bottom: 15px;
+  display: inline-block;
+  box-shadow: 0 4px 0 #cc8400;
+  margin-bottom: 20px;
 }
 
+/* CHEAT BUTTONS */
+.cheat-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 15px;
+}
 
 .cheat-buttons button {
-  background-color: #9f48e3;
+  background-color: #a259ff;
   color: white;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 10px 16px;
+  padding: 12px 18px;
   border: none;
   border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 0 #752fcc;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.1s ease-in-out;
+
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 180px;
+  height: 44px;
 }
 
 .cheat-buttons button:hover {
-  background-color: #7b2cbf;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 button.copied {
@@ -151,50 +173,3 @@ button.copied {
   font-size: 14px;
   opacity: 0.8;
 }
-
-.cheat-section {
-  background-color: #3b0a52;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.section-title {
-  background-color: #ffa500;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  display: inline-block;
-  box-shadow: 0 4px 0 #cc8400;
-  margin-bottom: 20px;
-}
-
-.cheat-buttons button {
-  background-color: #a259ff;
-  color: white;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: 0 4px 0 #752fcc;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-
-.cheat-buttons button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.cheat-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 14px;
-  justify-items: center;
-  align-items: start;
-  margin-top: 15px;
-  }
