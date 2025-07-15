@@ -1,6 +1,6 @@
 const cheatData = {
   global: [
-    { name: "Kosong", path: "Global/kosong.js" }
+    { name: "Jawaban Otomatis", path: "Global/JawabanOtomatis.js" }
   ],
   bajak: [
     { name: "Kosong", path: "Bajak/kosong.js" }
