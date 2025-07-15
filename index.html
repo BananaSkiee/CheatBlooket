@@ -3,50 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cheat Blooket Clone</title>
+  <title>Cheat Blooket</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h2>Curang</h2>
-      <a class="discord-btn" href="https://discord.new/83ZcsP2rM9JV" target="_blank">🟦 Perselisihan</a>
-      <ul>
-        <li>🌐 Global</li>
-        <li>⛵ Pelayaran Bajak Laut</li>
-        <li>🧀 Pencarian Emas</li>
-        <li>🍕 Kafe</li>
-        <li>🪙 Peretasan Kripto</li>
-        <li>🦴 Dinosaurus</li>
-        <li>🧟 Penipu Pertahanan</li>
-        <li>🏰 Menara Pertahanan</li>
-        <li>🏰 Menara 2</li>
-        <li>🏭 Pabrik</li>
-        <li>😈 Kegilaan</li>
-        <li>🎣 Memancing</li>
-        <li>🐤 Flappy Blook</li>
-        <li>🎲 Menara Malapetaka</li>
-        <li>👑 Kerajaan Gila</li>
-        <li>🏁 Balap</li>
-        <li>⚔️ Pertempuran Royale</li>
-        <li>🛡️ Blook Rush</li>
-        <li>👹 Perkelahian Monster</li>
-        <li>🎅 Bengkel Santa</li>
+      <h2>Menu</h2>
+      <a class="discord-btn" href="https://discord.new/83ZcsP2rM9JV" target="_blank">✨ Gabung Discord</a>
+      <ul id="sidebar-menu">
+        <li data-kategori="global"><img src="https://i.imgur.com/4f0vZzF.png"><span>Global</span></li>
+        <li data-kategori="bajak"><img src="https://i.imgur.com/oJz8pFG.png"><span>Pelayaran Bajak Laut</span></li>
+        <li data-kategori="emas"><img src="https://i.imgur.com/YH1xSFW.png"><span>Pencarian Emas</span></li>
+        <li data-kategori="kafe"><img src="https://i.imgur.com/LdCUHv1.png"><span>Kafe</span></li>
+        <li data-kategori="kripto"><img src="https://i.imgur.com/BiXvUxy.png"><span>Peretasan Kripto</span></li>
+        <li data-kategori="dino"><img src="https://i.imgur.com/WX1MrKZ.png"><span>Dinosaurus</span></li>
+        <li data-kategori="defense"><img src="https://i.imgur.com/vHOu1ga.png"><span>Penipu Pertahanan</span></li>
+        <li data-kategori="tower1"><img src="https://i.imgur.com/HlmnCHd.png"><span>Menara Pertahanan</span></li>
+        <li data-kategori="tower2"><img src="https://i.imgur.com/HlmnCHd.png"><span>Menara 2</span></li>
+        <li data-kategori="pabrik"><img src="https://i.imgur.com/kEjcn9F.png"><span>Pabrik</span></li>
+        <li data-kategori="gila"><img src="https://i.imgur.com/m0mA0ND.png"><span>Kegilaan</span></li>
+        <li data-kategori="mancing"><img src="https://i.imgur.com/Q2g3X7v.png"><span>Memancing</span></li>
+        <li data-kategori="flappy"><img src="https://i.imgur.com/v2FVMS7.png"><span>Flappy Blook</span></li>
+        <li data-kategori="doom"><img src="https://i.imgur.com/WUuEWDk.png"><span>Menara Malapetaka</span></li>
+        <li data-kategori="kerajaan"><img src="https://i.imgur.com/v27DTjo.png"><span>Kerajaan Gila</span></li>
+        <li data-kategori="balap"><img src="https://i.imgur.com/4Ds9OVl.png"><span>Balap</span></li>
+        <li data-kategori="royale"><img src="https://i.imgur.com/ZRJ1hV7.png"><span>Pertempuran Royale</span></li>
+        <li data-kategori="rush"><img src="https://i.imgur.com/mzAsVi5.png"><span>Blook Rush</span></li>
+        <li data-kategori="monster"><img src="https://i.imgur.com/YXtvRrq.png"><span>Perkelahian Monster</span></li>
+        <li data-kategori="santa"><img src="https://i.imgur.com/bo1zwkr.png"><span>Bengkel Santa</span></li>
       </ul>
     </aside>
 
     <main class="main-content">
-      <h1>Klik cheat untuk menyalin skrip atau seret ke bilah bookmark</h1>
+      <h1>Klik cheat untuk menyalin ke clipboard</h1>
 
-      <section class="cheat-section">
+      <!-- Semua section cheat disini, hanya satu ditampilkan -->
+      <section class="cheat-section" data-kategori="global">
         <h2 class="section-title">Cheat Global</h2>
-        <div id="cheat-buttons-global" class="cheat-buttons"></div>
+        <div class="cheat-buttons">
+          <button onclick="copyCheat('cheats/global/JawabanOtomatis.js')">Jawaban Otomatis</button>
+          <button onclick="copyCheat('cheats/global/TambahToken.js')">Tambah Token</button>
+        </div>
       </section>
 
-      <section class="cheat-section">
-        <h2 class="section-title">Antarmuka Pengguna (GUI)</h2>
-        <div id="cheat-buttons-gui" class="cheat-buttons"></div>
+      <section class="cheat-section" data-kategori="kripto">
+        <h2 class="section-title">Peretasan Kripto</h2>
+        <div class="cheat-buttons">
+          <button onclick="copyCheat('cheats/kripto/MencuriCrypto.js')">Mencuri Crypto</button>
+        </div>
       </section>
+
+      <!-- Tambahkan section lainnya sesuai kebutuhan -->
 
       <footer class="footer">
         <p>✨ Dibuat oleh <strong>Andra 9.2</strong> – Tools untuk para temen-temen Andra</p>
@@ -54,6 +62,36 @@
     </main>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    async function copyCheat(path) {
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error("Gagal ambil file");
+        const text = await res.text();
+        await navigator.clipboard.writeText(text);
+        alert("✅ Cheat disalin ke clipboard!");
+      } catch (err) {
+        alert("❌ Gagal salin cheat:\n" + err.message);
+      }
+    }
+
+    // Sidebar interaktif
+    const sidebarItems = document.querySelectorAll("#sidebar-menu li");
+    const sections = document.querySelectorAll(".cheat-section");
+
+    sidebarItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const kategori = item.getAttribute("data-kategori");
+        sections.forEach(section => {
+          section.style.display = section.getAttribute("data-kategori") === kategori ? "block" : "none";
+        });
+      });
+    });
+
+    // Tampilkan default kategori (global)
+    sections.forEach(section => {
+      section.style.display = section.getAttribute("data-kategori") === "global" ? "block" : "none";
+    });
+  </script>
 </body>
 </html>
