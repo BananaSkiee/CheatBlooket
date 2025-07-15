@@ -1,13 +1,5 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY + CONTAINER */
 body {
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-family: 'Fredoka One', 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(to bottom, #38a1f3 0%, #7a5fff 100%);
   color: #fff;
   min-height: 100vh;
@@ -19,239 +11,191 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
   width: 250px;
-  background: linear-gradient(160deg, #9333ea 70%, #7c3aed 100%);
-  box-shadow: 2px 0 16px rgba(68,0,120,0.12);
+  height: 100vh;
+  background: #a259fb;
+  padding: 28px 12px 18px 12px;
+  overflow-y: auto;
+  box-shadow: 2px 0 16px rgba(68,0,120,0.09);
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  left: 0; top: 0; bottom: 0;
-  height: 100vh;
-  z-index: 10;
-  overflow-y: auto;
-  padding: 28px 16px 18px 16px;
 }
 
 .sidebar h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 30px;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
 }
 
 .discord-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background: linear-gradient(90deg, #2563eb, #1e40af);
+  background: #27c1e4;
   color: #fff;
-  padding: 12px 0;
-  text-align: center;
+  padding: 13px 0;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 16px;
-  border-radius: 10px;
-  margin-bottom: 28px;
+  font-size: 17px;
+  margin-bottom: 22px;
   text-decoration: none;
-  transition: background 0.18s;
-  box-shadow: 0 2px 8px rgba(36,51,235,0.10);
+  box-shadow: 0 4px 16px #0051aa18;
   border: none;
+  transition: filter 0.14s;
 }
-
-.discord-btn:hover {
-  background: linear-gradient(90deg, #1e40af, #2563eb);
-}
+.discord-btn:hover { filter: brightness(1.12); }
 
 #sidebar-menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 #sidebar-menu li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: #a855f7;
-  padding: 10px 13px;
-  margin-bottom: 11px;
-  border-radius: 8px;
+  gap: 11px;
+  margin-bottom: 9px;
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #b37df2;
   cursor: pointer;
-  transition: background-color 0.16s, box-shadow 0.15s;
-  font-weight: 500;
-  font-size: 15px;
-  user-select: none;
-  border: 2px solid transparent;
+  font-size: 17px;
+  font-family: 'Fredoka One', cursive;
+  color: #fff;
+  transition: background 0.16s, box-shadow 0.15s;
+  box-shadow: none;
 }
-
 #sidebar-menu li:hover,
 #sidebar-menu li.active {
-  background: #6d28d9;
-  box-shadow: 0 0 0 2px #fff, 0 2px 10px rgba(80, 40, 200, 0.12);
-  border-color: #fff;
+  background: #fff;
+  color: #9333ea;
+  box-shadow: 0 0 0 2px #FFBF00, 0 2px 12px #0001;
+  font-weight: bold;
 }
-
 #sidebar-menu li img {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   object-fit: cover;
   border-radius: 7px;
   background: #fff2;
   flex-shrink: 0;
 }
-
 #sidebar-menu li span {
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #fff;
-  font-size: 15px;
 }
 
-/* MAIN CONTENT */
 .main-content {
   flex: 1;
-  padding: 36px 26px 20px 26px;
-  background: rgba(35,20,42,0.04);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   margin-left: 250px;
+  padding: 32px 24px 24px 24px;
+  min-height: 100vh;
+  background: transparent;
   overflow-y: auto;
-  height: 100vh;
 }
 
+/* Title Font Mirip */
 h1 {
-  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.1rem;
   text-align: center;
-  margin-bottom: 26px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+  color: #fff;
+  text-shadow: 0 2px 10px #0002;
+  letter-spacing: 0.04em;
 }
 
-/* SECTION TITLE */
+/* Section Box */
+.cheat-section {
+  display: none;
+  max-width: 950px;
+  margin: 0 auto 38px auto;
+  background: #420864;
+  border-radius: 17px;
+  box-shadow: 0 8px 32px #0003;
+  padding: 28px 20px 32px 20px;
+  position: relative;
+}
+
+/* Section Title */
 .section-title {
   background: #ffbf00;
   color: #222;
-  padding: 7px 22px;
+  padding: 8px 30px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
   display: inline-block;
-  margin-bottom: 22px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.18);
-  letter-spacing: 0.5px;
+  margin-bottom: 27px;
+  font-family: 'Fredoka One', cursive;
+  box-shadow: 0 3px 8px #0003;
   text-transform: uppercase;
-  text-align: center;
-  /* Shadow fix for Global Cheat title */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25); 
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4); 
+  letter-spacing: 0.5px;
 }
 
-/* CHEAT SECTION */
-.cheat-section {
-  display: none;
-  background: #3b0a52;
-  border-radius: 14px;
-  padding: 22px 18px 26px 18px;
-  margin-bottom: 36px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.23);
-  animation: fadeIn .35s cubic-bezier(.55,0,.2,1);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px);}
-  to { opacity: 1; transform: none;}
-}
-
-/* CHEAT BUTTONS GRID */
+/* Cheat Buttons */
 .cheat-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 18px 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 32px;
   place-items: center;
   margin-top: 10px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center; /* Fix for button centering when only 1 or 2 buttons */
 }
 
-/* CHEAT BUTTONS STYLE */
 .cheat-buttons button {
-  background: linear-gradient(90deg, #a259ff 70%, #38a1f3 100%);
+  background: #b37df2;
   color: #fff;
-  padding: 15px 12px;
+  padding: 18px 10px;
   border: none;
-  border-radius: 10px;
-  font-size: 15px;
+  border-radius: 12px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.07rem;
   font-weight: 600;
-  box-shadow: 0 4px 0 #752fcc;
+  box-shadow: 0 5px 0 #752fcc;
   cursor: pointer;
-  transition: transform 0.11s, box-shadow 0.13s, background 0.13s;
+  transition: all 0.13s;
   width: 100%;
-  max-width: 170px;
-  height: 47px;
+  max-width: 215px;
+  min-width: 160px;
+  height: 56px;
   text-align: center;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
   outline: none;
   position: relative;
 }
-
-.cheat-buttons button:hover,
-.cheat-buttons button.copied {
-  transform: translateY(-2px) scale(1.045);
-  box-shadow: 0 9px 18px rgba(90,30,150,0.20);
-  background: linear-gradient(90deg, #38a1f3 45%, #a259ff 100%);
-}
-
-.cheat-buttons button.copied::after {
-  content: "✓";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+.cheat-buttons button:hover {
+  background: #27c1e4;
   color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  animation: pop .35s;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 7px 16px #27c1e470;
 }
 
-@keyframes pop {
-  from { transform: scale(0) translateY(-50%); opacity: 0;}
-  to { transform: scale(1.1) translateY(-50%); opacity: 1;}
+/* Responsive */
+@media (max-width: 1050px) {
+  .main-content { padding: 20px 4vw; }
+  .cheat-section { max-width: 98vw; }
+  .cheat-buttons { grid-template-columns: repeat(2, 1fr); }
 }
-
-/* RESPONSIVE */
-@media (max-width: 950px) {
-  .sidebar {
-    width: 180px;
-    padding: 16px 5px;
-  }
-  .main-content {
-    margin-left: 180px;
-  }
-}
-
 @media (max-width: 700px) {
-  .container {
-    flex-direction: column;
-  }
+  .container { flex-direction: column; }
   .sidebar {
     position: static;
     width: 100vw;
     height: auto;
-    max-height: 140px;
+    max-height: 150px;
     flex-direction: row;
     box-shadow: none;
     border-radius: 0 0 14px 14px;
@@ -263,39 +207,34 @@ h1 {
   #sidebar-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     gap: 8px;
   }
   #sidebar-menu li {
     margin-bottom: 0;
     margin-right: 7px;
-    min-width: 110px;
-    flex: 0 0 110px;
+    min-width: 90px;
+    flex: 0 0 90px;
     padding: 8px 8px;
   }
   .main-content {
-    min-width: 0;
-    padding: 14px 3vw;
     margin-left: 0;
-    height: auto;
+    padding: 14px 3vw;
+    min-width: 0;
   }
-  .cheat-buttons {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    max-width: 98vw;
-    gap: 13px 7px;
-  }
+  .cheat-section { padding: 13px 5px 16px 5px; }
+  .cheat-buttons { grid-template-columns: repeat(1, 1fr); gap: 11px 7px; }
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: auto;
+  margin-top: 50px;
   padding: 22px 0 6px 0;
   font-size: 14px;
   opacity: 0.90;
   color: #fff;
   letter-spacing: 0.1px;
-  text-shadow: 0 1px 8px rgba(70,30,150,0.05);
+  text-shadow: 0 1px 8px #0002;
 }
