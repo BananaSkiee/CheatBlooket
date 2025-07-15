@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cheat by Andra 9.2</title>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      color: #0bc2cf;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background: #0bc2cf;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #099aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cheat by Andra 9.2</h1>
+  <p>Click tombol di bawah untuk menyalin cheat ke clipboard:</p>
+
+  <button onclick="copyCheat('Global/AutoJawab.js')">🤖 Auto Jawab</button>
+
+  <script>
+    async function copyCheat(path) {
+      try {
+        const res = await fetch(path);
+        const text = await res.text();
+        await navigator.clipboard.writeText(text);
+        alert("Cheat berhasil disalin ke clipboard!");
+      } catch (err) {
+        alert("Gagal menyalin cheat: " + err.message);
+      }
+    }
+  </script>
+</body>
+</html>
