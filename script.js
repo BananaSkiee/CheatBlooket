@@ -1,4 +1,3 @@
-// Cheat list terbagi jadi dua bagian: Global & GUI
 const globalCheats = [
   { name: "Selalu Tiga Kali Lipat", path: "cheats/SelaluTigaKaliLipat.js" },
   { name: "Tebakan Otomatis", path: "cheats/TebakanOtomatis.js" },
