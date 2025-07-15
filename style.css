@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(to bottom, #38a1f3 0%, #7a5fff 100%);
@@ -18,7 +15,6 @@ body {
   height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
   position: fixed;
   top: 0; left: 0; bottom: 0;
@@ -67,7 +63,6 @@ body {
 #sidebar-menu {
   list-style: none;
 }
-
 #sidebar-menu li {
   display: flex;
   align-items: center;
@@ -106,7 +101,6 @@ body {
   text-overflow: ellipsis;
 }
 
-/* MAIN CONTENT */
 .main-content {
   flex: 1;
   margin-left: 250px;
@@ -130,7 +124,6 @@ h1 {
   letter-spacing: 0.04em;
 }
 
-/* SECTION BOX */
 .cheat-section {
   display: none;
   max-width: 900px;
@@ -181,7 +174,7 @@ h1 {
   padding: 19px 18px;
   border: none;
   border-radius: 13px;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   box-shadow: 0 5px 0 #752fcc60;
@@ -204,7 +197,6 @@ h1 {
   box-shadow: 0 7px 16px #7c3aed40;
 }
 
-/* Responsive */
 @media (max-width: 1300px) {
   .cheat-section { max-width: 99vw; padding: 25px 10px 30px 10px; }
   .cheat-buttons { grid-template-columns: repeat(2, 1fr); }
