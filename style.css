@@ -28,14 +28,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .sidebar h2 {
   font-family: 'Fredoka One', cursive;
   font-size: 30px;
   margin-bottom: 25px;
   letter-spacing: 1.2px;
 }
-
 .discord-btn {
   display: flex;
   align-items: center;
@@ -59,7 +57,6 @@ body {
   color: #fff;
   text-decoration: none;
 }
-
 #sidebar-menu {
   list-style: none;
 }
@@ -113,92 +110,97 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 h1 {
   font-family: 'Fredoka One', cursive;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
   color: #fff;
   text-shadow: 0 2px 10px #0002;
   letter-spacing: 0.04em;
 }
 
+/* SECTION BOX */
 .cheat-section {
   display: none;
-  max-width: 900px;
-  margin: 0 auto 38px auto;
+  max-width: 950px;
+  margin: 0 auto 42px auto;
   background: #420864;
-  border-radius: 20px;
+  border-radius: 22px;
   box-shadow: 0 8px 32px #0003;
-  padding: 38px 26px 42px 26px;
+  padding: 55px 42px 54px 42px;
   position: relative;
 }
 
 /* SECTION TITLE */
 .section-title {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin: 0 auto 33px auto;
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(90deg, #FFBF00 90%, #FFA600 100%);
   color: #fff;
   font-family: 'Fredoka One', cursive;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 700;
-  padding: 9px 36px 8px 36px;
-  border-radius: 13px;
-  margin-bottom: 22px;
-  box-shadow: 0 4px 0 #FFA600, 0 2px 8px #0003;
+  padding: 10px 42px 10px 42px;
+  border-radius: 15px;
+  box-shadow: 0 6px 0 #FFA600, 0 2px 18px #da910080;
   border: 4px solid #ff9800;
-  text-shadow: 1px 2px 2px #da9100a0;
+  text-shadow: 1px 2px 6px #da9100a0, 0 2px 2.5px #0006;
   letter-spacing: 0.5px;
-  text-transform: none;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
 }
 
 /* CHEAT BUTTONS */
 .cheat-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px 28px;
+  gap: 30px 38px;
   place-items: center;
-  margin-top: 10px;
-  max-width: 800px;
+  margin-top: 0px;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .cheat-buttons button {
-  background: #a86dd8;
+  background: #8649ad;
   color: #fff;
-  padding: 19px 18px;
+  padding: 23px 0px;
   border: none;
-  border-radius: 13px;
+  border-radius: 11px;
   font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  box-shadow: 0 5px 0 #752fcc60;
+  box-shadow: 0 7px 0 #65337e48;
   cursor: pointer;
   transition: all 0.13s;
-  width: 100%;
-  max-width: 230px;
-  min-width: 160px;
-  height: 56px;
+  width: 96%;
+  min-width: 0;
+  height: 64px;
   text-align: center;
   white-space: normal;
   overflow: visible;
   outline: none;
   letter-spacing: 0.01em;
+  margin: 0 auto;
+  display: block;
 }
 .cheat-buttons button:hover {
-  background: #7c3aed;
+  background: #713597;
   color: #fff;
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 7px 16px #7c3aed40;
+  box-shadow: 0 10px 22px #7c3aed50;
 }
 
-@media (max-width: 1300px) {
-  .cheat-section { max-width: 99vw; padding: 25px 10px 30px 10px; }
+/* Responsive */
+@media (max-width: 1100px) {
+  .cheat-section { max-width: 99vw; padding: 38px 10px 30px 10px; }
   .cheat-buttons { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
