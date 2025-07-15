@@ -85,9 +85,18 @@ async function copyCheat(path) {
     if (!res.ok) throw new Error("Gagal ambil file");
     const code = await res.text();
     await navigator.clipboard.writeText(code);
-    alert("✅ Cheat disalin ke clipboard!");
+
+    // Hapus status 'copied' dari semua tombol
+    document.querySelectorAll("button").forEach(btn => btn.classList.remove("copied"));
+
+    // Tambahkan status 'copied' ke tombol yang diklik
+    const clickedButton = [...document.querySelectorAll("button")].find(btn =>
+      btn.getAttribute("onclick")?.includes(path)
+    );
+    if (clickedButton) clickedButton.classList.add("copied");
+
   } catch (err) {
-    alert("❌ Gagal salin cheat:\n" + err.message);
+    console.warn("Gagal salin cheat:", err.message); // Tidak tampil ke user
   }
 }
 
