@@ -42,18 +42,18 @@ function showCategory(category) {
 async function copyCheat(path, button = null) {
   try {
     const res = await fetch(path);
-    if (!res.ok) return; // Jangan alert apapun, diam saja
+    if (!res.ok) return; // Tidak munculkan error
 
     const code = await res.text();
     await navigator.clipboard.writeText(code);
 
-    // Reset semua tombol jadi normal
-    document.querySelectorAll("button").forEach(btn => btn.classList.remove("copied"));
+    // Reset semua tombol
+    document.querySelectorAll(".cheat-buttons button").forEach(btn => btn.classList.remove("copied"));
 
-    // Tandai tombol yg diklik jadi 'copied'
+    // Tandai tombol ini sebagai copied
     if (button) button.classList.add("copied");
   } catch (err) {
-    console.warn("Gagal salin cheat:", err.message); // Tidak alert ke user
+    console.warn("Gagal salin cheat:", err.message); // Diam saja
   }
 }
 
@@ -61,14 +61,18 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Sidebar handler
+// Sidebar handler + aktif
 const sidebarItems = document.querySelectorAll("#sidebar-menu li");
 sidebarItems.forEach(item => {
   item.addEventListener("click", () => {
+    sidebarItems.forEach(i => i.classList.remove("active")); // reset
+    item.classList.add("active"); // tandai aktif
+
     const kategori = item.getAttribute("data-kategori");
     showCategory(kategori);
   });
 });
 
-// Load default kategori saat pertama kali buka
+// Tampilkan awal: global
+document.querySelector("#sidebar-menu li[data-kategori='global']")?.classList.add("active");
 showCategory("global");
