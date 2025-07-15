@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <style>
     body {
-      background-color: #121212;
+      background-color: #0e0e0e;
       color: #fff;
       font-family: sans-serif;
       text-align: center;
       padding-top: 50px;
     }
     h1 {
-      color: #0bc2cf;
+      color: #00e0ff;
     }
     button {
       padding: 10px 20px;
@@ -21,29 +21,32 @@
       color: white;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
       font-size: 16px;
+      cursor: pointer;
     }
     button:hover {
-      background-color: #099aaa;
+      background: #099aaa;
     }
   </style>
 </head>
 <body>
   <h1>Cheat by Andra 9.2</h1>
-  <p>Click tombol di bawah untuk menyalin cheat ke clipboard:</p>
+  <p>Klik untuk menyalin cheat ke clipboard:</p>
 
+  <!-- Tambah tombol di sini -->
   <button onclick="copyCheat('Global/AutoJawab.js')">🤖 Auto Jawab</button>
 
   <script>
     async function copyCheat(path) {
       try {
         const res = await fetch(path);
-        const text = await res.text();
-        await navigator.clipboard.writeText(text);
-        alert("Cheat berhasil disalin ke clipboard!");
+        if (!res.ok) throw new Error("Gagal fetch: " + res.status);
+        const code = await res.text();
+        await navigator.clipboard.writeText(code);
+        alert("✅ Cheat berhasil disalin ke clipboard!");
       } catch (err) {
-        alert("Gagal menyalin cheat: " + err.message);
+        alert("❌ Gagal:\n" + err.message);
+        console.error(err);
       }
     }
   </script>
