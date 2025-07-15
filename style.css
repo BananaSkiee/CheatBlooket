@@ -109,30 +109,41 @@ h1 {
   background-color: #f59e0b;
   color: black;
   display: inline-block;
-  padding: 6px 15px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
   margin-bottom: 15px;
 }
 
+/* CHEAT BUTTONS */
 .cheat-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 15px;
 }
 
 .cheat-buttons button {
-  background-color: #a855f7;
+  background-color: #9f48e3;
   color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
   border: none;
-  padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
   transition: background-color 0.2s ease;
 }
 
 .cheat-buttons button:hover {
-  background-color: #9333ea;
+  background-color: #7b2cbf;
+}
+
+button.copied {
+  background-color: #28a745 !important;
+  color: white !important;
+  border: none;
 }
 
 /* FOOTER */
@@ -143,27 +154,11 @@ h1 {
   opacity: 0.8;
 }
 
-button.copied {
-  background-color: #28a745 !important;
-  color: #fff !important;
-  border: none;
-  transition: background-color 0.3s;
-}
-
+/* ACTIVE SIDEBAR */
 #sidebar-menu li.active {
   background-color: #6d28d9;
   box-shadow: 0 0 0 2px #fff;
-}
-
-.cheat-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start;
-  margin-top: 15px;
-}
-
-.cheat-buttons button {
+}.cheat-buttons button {
   background-color: #9f48e3;
   color: white;
   font-weight: 600;
