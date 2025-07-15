@@ -121,14 +121,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* CHEAT BUTTONS */
-.cheat-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start;
-  margin-top: 15px;
-}
 
 .cheat-buttons button {
   background-color: #9f48e3;
@@ -178,12 +170,6 @@ button.copied {
   display: inline-block;
   box-shadow: 0 4px 0 #cc8400;
   margin-bottom: 20px;
-}
-
-.cheat-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
 }
 
 .cheat-buttons button {
