@@ -28,8 +28,6 @@ body {
   display: flex;
   flex-direction: column;
   border-bottom-left-radius: 22px;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 .sidebar h2 {
   font-family: 'Fredoka One', cursive;
@@ -110,7 +108,7 @@ body {
 .main-content {
   flex: 1;
   margin-left: 250px;
-  padding: 20px 24px 24px 24px;
+  padding: 10px 24px 24px 24px;
   min-height: 100vh;
   background: transparent;
   overflow-y: auto;
@@ -122,27 +120,27 @@ body {
 
 h1 {
   font-family: 'Fredoka One', cursive;
-  font-size: 2.25rem;
+  font-size: 2.22rem;
   text-align: center;
-  margin-bottom: 36px;
-  margin-top: 7px;
+  margin-bottom: 38px;
+  margin-top: 0;
   color: #fff;
   text-shadow: 0 2px 10px #0002;
   letter-spacing: 0.04em;
   line-height: 1.2;
   position: relative;
-  top: -10px;
+  top: -19px;
 }
 
 /* SECTION BOX */
 .cheat-section {
   display: none;
-  max-width: 950px;
-  margin: 0 auto 42px auto;
+  max-width: 1100px;
+  margin: 0 auto 48px auto;
   background: #420864;
-  border-radius: 22px;
+  border-radius: 35px;
   box-shadow: 0 8px 32px #0003;
-  padding: 55px 42px 54px 42px;
+  padding: 65px 54px 70px 54px;
   position: relative;
 }
 
@@ -152,7 +150,7 @@ h1 {
   width: max-content;
   margin: 0 auto 33px auto;
   position: absolute;
-  top: -32px;
+  top: -37px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(90deg, #FFBF00 90%, #FFA600 100%);
@@ -160,9 +158,9 @@ h1 {
   font-family: 'Fredoka One', cursive;
   font-size: 2.1rem;
   font-weight: 700;
-  padding: 10px 42px 10px 42px;
-  border-radius: 15px;
-  box-shadow: 0 6px 0 #FFA600, 0 2px 18px #da910080;
+  padding: 12px 52px 12px 52px;
+  border-radius: 19px;
+  box-shadow: 0 8px 0 #FFA600, 0 2px 18px #da910080;
   border: 4px solid #ff9800;
   text-shadow: 1px 2px 6px #da9100a0, 0 2px 2.5px #0006;
   letter-spacing: 0.5px;
@@ -174,29 +172,29 @@ h1 {
 .cheat-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px 33px;
+  gap: 30px 36px;
   place-items: center;
   margin-top: 0px;
-  max-width: 860px;
+  max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
 }
 .cheat-buttons button {
   background: #a86dd8;
   color: #fff;
-  padding: 19px 0;
+  padding: 15px 0;
   border: none;
-  border-radius: 11px;
+  border-radius: 13px;
   font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 1.13rem;
+  font-size: 1.04rem;
   font-weight: 600;
   box-shadow: 0 6px 0 #752fcc60;
   cursor: pointer;
   transition: all 0.13s;
-  width: 100%;
-  max-width: 235px;
+  width: 99%;
+  max-width: 270px;
   min-width: 120px;
-  height: 58px;
+  height: 46px;
   text-align: center;
   white-space: normal;
   overflow: visible;
@@ -213,13 +211,13 @@ h1 {
 }
 
 /* Responsive */
-@media (max-width: 1100px) {
-  .cheat-section { max-width: 99vw; padding: 38px 10px 30px 10px; }
+@media (max-width: 1200px) {
+  .cheat-section { max-width: 98vw; padding: 32px 7px 32px 7px; border-radius: 18px;}
   .cheat-buttons { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
   .main-content { padding: 14px 2vw; }
-  .cheat-section { max-width: 98vw; }
+  .cheat-section { max-width: 98vw; padding: 17px 2px 17px 2px;}
   .cheat-buttons { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
