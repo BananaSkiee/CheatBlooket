@@ -1,3 +1,4 @@
+/* RESET & BODY */
 * {
   margin: 0;
   padding: 0;
@@ -8,58 +9,81 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #38a1f3, #7a5fff);
   color: white;
-  display: flex;
   min-height: 100vh;
+  display: flex;
 }
 
+/* LAYOUT */
 .container {
   display: flex;
   width: 100%;
 }
 
+/* SIDEBAR */
 .sidebar {
-  background-color: #a855f7;
-  width: 230px;
+  width: 250px;
+  background-color: #9333ea;
   padding: 20px;
   overflow-y: auto;
   height: 100vh;
-  position: sticky;
-  top: 0;
 }
 
 .sidebar h2 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .discord-btn {
-  background-color: #3b82f6;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
   display: block;
-  transition: background-color 0.2s ease;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .discord-btn:hover {
-  background-color: #2563eb;
+  background-color: #1d4ed8;
 }
 
-.sidebar ul {
+/* SIDEBAR MENU */
+#sidebar-menu {
   list-style: none;
-  margin-top: 10px;
 }
 
-.sidebar li {
+#sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #a855f7;
+  padding: 10px;
   margin-bottom: 10px;
-  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
+#sidebar-menu li:hover {
+  background-color: #7c3aed;
+}
+
+#sidebar-menu li img {
+  width: 24px;
+  height: 24px;
+}
+
+#sidebar-menu li span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* MAIN CONTENT */
 .main-content {
   flex: 1;
   padding: 30px;
@@ -69,14 +93,15 @@ h1 {
   font-size: 20px;
   text-align: center;
   margin-bottom: 30px;
-  color: white;
 }
 
+/* CHEAT SECTION */
 .cheat-section {
-  margin-bottom: 40px;
+  display: none;
   background-color: #3b0764;
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 40px;
 }
 
 .section-title {
@@ -84,17 +109,15 @@ h1 {
   background-color: #f59e0b;
   color: black;
   display: inline-block;
-  padding: 6px 18px;
+  padding: 6px 15px;
   border-radius: 5px;
   margin-bottom: 15px;
-  font-weight: bold;
 }
 
 .cheat-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 15px;
 }
 
 .cheat-buttons button {
@@ -105,18 +128,17 @@ h1 {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .cheat-buttons button:hover {
   background-color: #9333ea;
-  transform: scale(1.05);
 }
 
+/* FOOTER */
 .footer {
-  margin-top: 50px;
   text-align: center;
-  color: #e5e7eb;
+  margin-top: 50px;
   font-size: 14px;
-  padding: 10px 0;
+  opacity: 0.8;
 }
