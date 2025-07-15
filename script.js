@@ -1,12 +1,25 @@
-// Cheat list kamu
-const cheats = [
-  { name: "Jawaban Otomatis", path: "cheats/JawabanOtomatis.js" },
-  { name: "Tambah Token", path: "cheats/TambahToken.js" }
+// Cheat list terbagi jadi dua bagian: Global & GUI
+const globalCheats = [
+  { name: "Selalu Tiga Kali Lipat", path: "cheats/SelaluTigaKaliLipat.js" },
+  { name: "Tebakan Otomatis", path: "cheats/TebakanOtomatis.js" },
+  { name: "Kata Sandi ESP", path: "cheats/KataSandiESP.js" },
+  { name: "Hapus Peretasan", path: "cheats/HapusPeretasan.js" },
+  { name: "Pilihan ESP", path: "cheats/PilihanESP.js" },
+  { name: "Tetapkan Kripto", path: "cheats/TetapkanKripto.js" },
+  { name: "Atur Kata Sandi", path: "cheats/AturKataSandi.js" },
+  { name: "Mencuri Pemain Crypto", path: "cheats/MencuriCrypto.js" }
 ];
 
-function createButtons() {
-  const container = document.getElementById("cheat-buttons");
-  cheats.forEach(cheat => {
+const guiCheats = [
+  { name: "Gui", path: "cheats/Gui.js" },
+  { name: "GUI Seluler", path: "cheats/GUISeluler.js" },
+  { name: "K Gui", path: "cheats/KGui.js" },
+  { name: "React GUI", path: "cheats/ReactGui.js" }
+];
+
+function createButtons(id, cheatList) {
+  const container = document.getElementById(id);
+  cheatList.forEach(cheat => {
     const btn = document.createElement("button");
     btn.textContent = cheat.name;
     btn.onclick = () => copyCheat(cheat.path);
@@ -20,11 +33,12 @@ async function copyCheat(path) {
     if (!res.ok) throw new Error("Gagal ambil file: " + res.status);
     const code = await res.text();
     await navigator.clipboard.writeText(code);
-    alert("✅ Cheat disalin ke clipboard!");
+    alert("✅ Cheat berhasil disalin ke clipboard!");
   } catch (err) {
     alert("❌ Gagal salin cheat:\n" + err.message);
     console.error(err);
   }
 }
 
-createButtons();
+createButtons("cheat-buttons-global", globalCheats);
+createButtons("cheat-buttons-gui", guiCheats);
