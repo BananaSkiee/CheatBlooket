@@ -1,48 +1,39 @@
-// Fungsi: Menyalin isi file JS cheat ke clipboard
-function copyCheat(path) {
-  fetch(path)
-    .then(response => response.text())
-    .then(code => {
-      const bookmarklet = `javascript:(function(){${code}})();`;
-      navigator.clipboard.writeText(bookmarklet).then(() => {
-        // Tambahkan efek visual tombol
-        const button = event.target;
-        button.classList.add("copied");
-        setTimeout(() => {
-          button.classList.remove("copied");
-        }, 2000);
-      });
-    })
-    .catch(err => {
-      console.error("Gagal mengambil cheat:", err);
-    });
+// Fungsi untuk salin script cheat ke clipboard
+async function copyCheat(path, button = null) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) return;
+
+    const text = await res.text();
+    await navigator.clipboard.writeText(text);
+
+    document.querySelectorAll("button").forEach(btn => btn.classList.remove("copied"));
+    if (button) button.classList.add("copied");
+  } catch (err) {
+    console.error("Gagal menyalin cheat:", err);
+  }
 }
 
-// Fungsi: Navigasi sidebar, tampilkan section cheat sesuai kategori
-document.addEventListener("DOMContentLoaded", () => {
-  const sidebarItems = document.querySelectorAll("#sidebar-menu li");
-  const sections = document.querySelectorAll(".cheat-section");
+// Sidebar interaktif: klik kategori
+const sidebarItems = document.querySelectorAll("#sidebar-menu li");
+const sections = document.querySelectorAll(".cheat-section");
 
-  // Fungsi untuk mengatur tampilan section
-  function showSection(kategori) {
+sidebarItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const kategori = item.getAttribute("data-kategori");
+
+    // Tampilkan hanya section sesuai kategori
     sections.forEach(section => {
-      const match = section.getAttribute("data-kategori") === kategori;
-      section.style.display = match ? "block" : "none";
+      section.style.display = section.getAttribute("data-kategori") === kategori ? "block" : "none";
     });
 
-    sidebarItems.forEach(item => {
-      item.classList.toggle("active", item.getAttribute("data-kategori") === kategori);
-    });
-  }
-
-  // Event klik menu sidebar
-  sidebarItems.forEach(item => {
-    item.addEventListener("click", () => {
-      const kategori = item.getAttribute("data-kategori");
-      showSection(kategori);
-    });
+    // Highlight menu aktif
+    sidebarItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
   });
+});
 
-  // Tampilkan default kategori saat pertama kali (misal: "global")
-  showSection("global");
+// Tampilkan default: "global"
+sections.forEach(section => {
+  section.style.display = section.getAttribute("data-kategori") === "global" ? "block" : "none";
 });
