@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family: Nunito, sans-serif;
+  font-family: 'Nunito', sans-serif;
   background: linear-gradient(162.5deg, rgba(0,183,255,1) 0%, rgba(128,0,255,1) 100%);
   overflow-x: hidden;
 }
@@ -25,6 +25,9 @@ body {
   text-align: center;
   user-select: none;
   padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .sidebar h2 {
@@ -36,15 +39,16 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #0bc2cf;
-  font-size: 20px;
-  padding: 10px 15px;
+  font-size: 18px;
+  padding: 10px;
   margin: 20px auto;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  text-shadow: 2px 2px rgb(0 0 0 / 20%);
+  border-radius: 6px;
+  text-shadow: 1px 1px rgb(0 0 0 / 25%);
   box-shadow: inset 0 -5px #0005;
   transition: 0.3s;
+  width: 90%;
 }
 
 .discord-btn:hover {
@@ -53,58 +57,151 @@ body {
   box-shadow: inset 0 -8px #0005;
 }
 
+#sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#sidebar-menu li {
+  cursor: pointer;
+  background: #b84ed7;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+#sidebar-menu li:hover,
+#sidebar-menu li.active {
+  background: #c084fc;
+}
+
+#sidebar-menu li img {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#sidebar-menu li span {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+}
+
 .main-content {
+  margin-left: 250px;
+  padding: 30px 20px;
   flex-grow: 1;
-  padding: 30px;
   overflow-y: auto;
 }
 
-.cheats {
-  background: rgb(64, 17, 95);
-  color: white;
-  border-radius: 7px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: inset 0 -6px #0003;
-}
-
-.cheats h3 {
-  margin-top: 0;
-  font-family: 'Titan One';
-}
-
-.cheats .script {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #9a49aa;
-  color: #fff;
-  height: 50px;
-  border-radius: 7px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.cheats .script:hover {
-  height: 53px;
-  filter: brightness(1.1);
-  box-shadow: inset 0 -9px #0003;
-}
-
-.cheats .script:active {
-  height: 44px;
-  margin-top: 16px;
-  padding-bottom: 5px;
-  box-shadow: inset 0 0 #0003;
-}
-
-.instructions {
+h1 {
   text-align: center;
-  font-size: 2rem;
-  color: #fff;
+  color: white;
   font-family: 'Titan One';
-  text-shadow: 2px 2px rgb(0 0 0 / 20%);
-  margin-top: 30px;
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  background: #ffbf00;
+  color: #222;
+  padding: 7px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cheat-section {
+  display: none;
+  background: #3b0a52;
+  border-radius: 14px;
+  padding: 22px 18px 26px 18px;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.23);
+  animation: fadeIn .35s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cheat-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+}
+
+.cheat-buttons button {
+  background: linear-gradient(90deg, #a259ff 70%, #38a1f3 100%);
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 0 #752fcc;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.cheat-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 18px rgba(90, 30, 150, 0.2);
+  background: linear-gradient(90deg, #38a1f3 45%, #a259ff 100%);
+}
+
+.cheat-buttons button.copied::after {
+  content: "✓";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.2) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+.footer {
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 14px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
 }
