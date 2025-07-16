@@ -1,1 +1,311 @@
-@import"https://fonts.googleapis.com/css?family=Titan+One";@import"https://fonts.googleapis.com/css?family=Nunito";.sidebar{overflow-y:scroll;background:#9a49aa;box-shadow:#0003 -10px 0 inset;z-index:5;width:250px;position:absolute;top:0;left:0;height:100%;font-family:Titan One;color:#fff;font-size:40px;text-align:center;-webkit-user-select:none;user-select:none;padding:20px 10px 20px 0;ukuran-kotak:kotak-batas;tampilan:fleksibel;arah-fleksibel:kolom}.bilah-scroll-webkit{lebar:10 piksel}.bilah-scroll-track-webkit{latar belakang:#9a49aa}.bilah-scroll-thumb{latar belakang:#9a49aa;bayangan-kotak:sisipan -10 piksel 0 #0003}.bilah-scroll-thumb:arahkan kursor{latar belakang:#9a49aa;bayangan-kotak:sisipan -10 piksel 0 #0000004d}.mode-permainan{posisi:relatif;tampilan:fleksibel;arah-fleksibel:baris;sejajarkan-item:tengah;tinggi-min.:40 piksel;lebar:220 piksel;margin:4 piksel 0;padding-left:15px;box-sizing:border-box;cursor:pointer;-webkit-user-select:none;user-select:none;text-decoration:none;border-top-right-radius:5px;border-bottom-right-radius:5px;background-color:transparent;color:#fff;transition:.2s linear;ukuran-font:20px;berat-font:400;keluarga-font:Nunito;ketebalan-dekorasi-teks:otomatis}.mode-permainan>div{tinggi:40px;lebar:100%;tampilan:fleksibel;justifikasi-konten:fleksibel-mulai;sejajarkan-item:tengah}.mode-permainan:arahkan{warna-latar-belakang:#fff;warna:#9a49aa;berat-font:700}.mode-permainan>img{lebar-maks:30px;tinggi-maks:30px;rasio-aspek:1 / 1;margin-kanan:10px;tampilan:fleksibel;sejajarkan-item:tengah;justifikasi-konten:tengah}.tombol-besar{warna-latar-belakang:#0bc2cf}.tombol-besar{ukuran-font:26px;bantalan:5px 20px 10px;margin:20px otomatis 10 piksel; warna:#fff; tampilan: fleksibel; ratakan konten: tengah; ratakan item: tengah; dekorasi teks: tidak ada; radius batas: 5 piksel; bayangan teks: 2 piksel 2 piksel rgb(0 0 0 / 20%); bayangan kotak: sisipan 0 -5 piksel #0005; transisi: .5 detik; kursor: penunjuk}. Tombol Besar: arahkan kursor{filter: kecerahan(1.1); bantalan bawah: 13 piksel; margin atas: 17 piksel; bayangan kotak: sisipan 0 -8 piksel #0005; transisi: .2 detik}. Tombol Besar: aktif{ bantalan bawah: 5 piksel; margin atas: 25 piksel; bayangan kotak: sisipan 0 0 #0005;transisi:.05dtk}.latar belakang{tampilan:blok;atas:0;kiri:250 piksel;tinggi minimum:100%;overflow-y:tersembunyi;overflow-x:tersembunyi;posisi:tetap;lebar:100%;latar belakang:gradien-linier(162,5derajat,rgba(0,183,255,1) 0%,rgba(128,0,255,1) 100%);visibilitas:terlihat;indeks-z:-1}.gambar-latar-belakang{posisi:mutlak;gambar-latar-belakang:url(https://ac.blooket.com/play/65a43218fd1cabe52bdf1cda34613e9e.png);lebar:11000px;tinggi:11320px;opasitas:.175;indeks-z:-1;animasi:40dtk blooks linier tak terbatas}@bingkai-kunci blooks{0%{transformasi:terjemahkan(-2124px,-568px) putar(15derajat)}ke{transformasi:terjemahkan(-1593px,-426px) putar(15derajat)}}.contentWrapper{posisi:mutlak;kiri:250px;atas:0;overflow-y:gulir;lebar:kalk(100% - 250px);height:100%;-ms-overflow-style:none;scrollbar-width:none;display:grid;flex-direction:column;grid-template-rows:1fr 5fr}.contentWrapper::-webkit-scrollbar{display:none}.content{overflow-y:hidden;padding:50px 15%;display:flex}.cheats{box-sizing:border-box;padding:20px 5px;position:relative;width:100%;font-family:Nunito,sans-serif;berat-font:400;warna:#fff;latar belakang:rgb(64,17,95);bayangan-kotak:#0003 0 -6px sisipan;radius-batas:7px;tinggi-maks:100%;blok-margin:otomatis}.cheatsContainer{margin:0;bantalan:0 0 0 10px;luapan-y:gulir;tampilan:fleksibel;bungkus-fleksibel:bungkus;celah:10px;justifikasi-konten:ruang-merata;sejajarkan-item:tengah}.cheatsContainer::-webkit-scrollbar{lebar:10px;warna-latar belakang:#40115f;radius-batas:10px;batas:2px solid rgb(64,17,95)}.cheatsContainer::-webkit-scrollbar-thumb{warna-latar:#9a49aa;radius-batas:10px;batas:2px solid rgb(64,17,95);bayangan-kotak:sisipan -10px 0 #0003}.cheatsContainer::-webkit-scrollbar-thumb:hover{bayangan-kotak:sisipan 0 0 #0003}.headerText{ukuran-kotak:kotak-batas;tampilan:blok;tinggi:45px;kiri:-10px;bantalan:4px 4px 8px;posisi:absolut;atas:-28px;warna-latar:#ef7426;bayangan-kotak:#0003 0 4px,#0003 0 -4px inset;radius-batas:7px}.headerText>div{sejajarkan-item:tengah;ukuran-kotak:kotak-batas;tampilan:fleksibel;tinggi:100%;ratakan-konten:tengah;padding:0 15px;lebar:100%;font-family:Titan One,sans-serif;ukuran-font:26px;berat-font:400;bayangan-teks:rgb(100,100,100) -1px -1px 0px,rgb(100,100,100) 1px -1px 0px,rgb(100,100,100) -1px 1px 0px,rgb(100,100,100) 2px 2px 0px;warna:#fff;latar belakang:gradien-linier(rgb(252,216,67),rgb(252,216,67) 50%,rgb(254,179,26) 50,01%,rgb(254,179,26));radius-batas:5px}.script{sejajarkan-item:tengah;ukuran-kotak:kotak-batas;tampilan:fleksibel;arah-fleksibel:kolom;ratakan-konten:tengah;padding:5px 5px 11px;posisi:relatif;lebar:250px;keluarga-font:Nunito,sans-serif;berat-font:400;warna:#fff;radius-batas:7px;kursor:penunjuk;transisi:.5s;margin-atas:10px;bayangan-kotak:sisipan 0 -6px #0003;-webkit-user-select:none;user-select:none;text-decoration:none;height:50px}.script:hover{height:53px;transition:.2s;filter:brightness(1.1);margin-top:7px;padding-bottom:14px;box-shadow:inset 0 -9px #0003}.script:active{height:44px;transition:.05s;margin-top:16px;padding-bottom:5px;box-shadow:inset 0 0 #0003}.instructions{text-align:center;font-size:2rem;color:#fff;font-family:Titan One;text-shadow:2px 2px rgb(0 0 0 / 20%);margin-block:auto}tengah; bantalan: 0 15 piksel; lebar: 100%; keluarga font: Titan One, sans-serif; ukuran font: 26 piksel; berat font: 400; bayangan teks: rgb (100,100,100) -1 piksel -1 piksel 0 piksel, rgb (100,100,100) 1 piksel -1 piksel 0 piksel, rgb (100,100,100) -1 piksel 1 piksel 0 piksel, rgb (100,100,100) 2 piksel 2 piksel 0 piksel; warna: #fff; latar belakang: gradien linier (rgb (252,216,67), rgb (252,216,67) 50%, rgb (254,179,26) 50,01%,rgb(254,179,26));radius-batas:5px}.script{sejajarkan-item:tengah;ukuran-kotak:kotak-batas;tampilkan:fleksibel;arah-fleksibel:kolom;ratakan-konten:tengah;padding:5px 5px 11px;posisi:relatif;lebar:250px;keluarga-font:Nunito,sans-serif;berat-font:400;warna:#fff;radius-batas:7px;kursor:penunjuk;transisi:.5s;margin-atas:10px;bayangan-kotak:sisipan 0 -6px #0003;-webkit-user-select:none;user-select:none;text-decoration:none;height:50px}.script:hover{height:53px;transition:.2s;filter:brightness(1.1);margin-top:7px;padding-bottom:14px;box-shadow:inset 0 -9px #0003}.script:active{height:44px;transition:.05s;margin-top:16px;padding-bottom:5px;box-shadow:inset 0 0 #0003}.instructions{text-align:center;font-size:2rem;color:#fff;font-family:Titan One;text-shadow:2px 2px rgb(0 0 0 / 20%);margin-block:auto}tengah; bantalan: 0 15 piksel; lebar: 100%; keluarga font: Titan One, sans-serif; ukuran font: 26 piksel; berat font: 400; bayangan teks: rgb (100,100,100) -1 piksel -1 piksel 0 piksel, rgb (100,100,100) 1 piksel -1 piksel 0 piksel, rgb (100,100,100) -1 piksel 1 piksel 0 piksel, rgb (100,100,100) 2 piksel 2 piksel 0 piksel; warna: #fff; latar belakang: gradien linier (rgb (252,216,67), rgb (252,216,67) 50%, rgb (254,179,26) 50,01%,rgb(254,179,26));radius-batas:5px}.script{sejajarkan-item:tengah;ukuran-kotak:kotak-batas;tampilkan:fleksibel;arah-fleksibel:kolom;ratakan-konten:tengah;padding:5px 5px 11px;posisi:relatif;lebar:250px;keluarga-font:Nunito,sans-serif;berat-font:400;warna:#fff;radius-batas:7px;kursor:penunjuk;transisi:.5s;margin-atas:10px;bayangan-kotak:sisipan 0 -6px #0003;-webkit-user-select:none;user-select:none;text-decoration:none;height:50px}.script:hover{height:53px;transition:.2s;filter:brightness(1.1);margin-top:7px;padding-bottom:14px;box-shadow:inset 0 -9px #0003}.script:active{height:44px;transition:.05s;margin-top:16px;padding-bottom:5px;box-shadow:inset 0 0 #0003}.instructions{text-align:center;font-size:2rem;color:#fff;font-family:Titan One;text-shadow:2px 2px rgb(0 0 0 / 20%);margin-block:auto}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY + CONTAINER */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(to bottom, #38a1f3 0%, #7a5fff 100%);
+  color: #fff;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(160deg, #9333ea 70%, #7c3aed 100%);
+  box-shadow: 2px 0 16px rgba(68, 0, 120, 0.12);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 10;
+  overflow-y: auto;
+  padding: 28px 16px 18px 16px;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.discord-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  text-decoration: none;
+  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(36, 51, 235, 0.10);
+  border: none;
+}
+
+.discord-btn:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+}
+
+#sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #a855f7;
+  padding: 10px 13px;
+  margin-bottom: 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.16s, box-shadow 0.15s;
+  font-weight: 500;
+  font-size: 15px;
+  user-select: none;
+  border: 2px solid transparent;
+}
+
+#sidebar-menu li:hover,
+#sidebar-menu li.active {
+  background: #6d28d9;
+  box-shadow: 0 0 0 2px #fff, 0 2px 10px rgba(80, 40, 200, 0.12);
+  border-color: #fff;
+}
+
+#sidebar-menu li img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 7px;
+  background: #fff2;
+  flex-shrink: 0;
+}
+
+#sidebar-menu li span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 36px 26px 20px 26px;
+  background: rgba(35, 20, 42, 0.04);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 26px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  background: #ffbf00;
+  color: #222;
+  padding: 7px 22px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* CHEAT SECTION */
+.cheat-section {
+  display: none;
+  background: #3b0a52;
+  border-radius: 14px;
+  padding: 22px 18px 26px 18px;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.23);
+  animation: fadeIn .35s cubic-bezier(.55, 0, .2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* CHEAT BUTTONS GRID */
+.cheat-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px 20px;
+  place-items: center;
+  margin-top: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CHEAT BUTTON STYLE */
+.cheat-buttons button {
+  background: linear-gradient(90deg, #a259ff 70%, #38a1f3 100%);
+  color: #fff;
+  padding: 15px 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 0 #752fcc;
+  cursor: pointer;
+  transition: transform 0.11s, box-shadow 0.13s, background 0.13s;
+  width: 100%;
+  max-width: 170px;
+  height: 47px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+  position: relative;
+}
+
+.cheat-buttons button:hover,
+.cheat-buttons button.copied {
+  transform: translateY(-2px) scale(1.045);
+  box-shadow: 0 9px 18px rgba(90, 30, 150, 0.20);
+  background: linear-gradient(90deg, #38a1f3 45%, #a259ff 100%);
+}
+
+.cheat-buttons button.copied::after {
+  content: "✓";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  animation: pop 0.35s;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.1) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 950px) {
+  .sidebar {
+    width: 180px;
+    padding: 16px 5px;
+  }
+  .main-content {
+    margin-left: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;
+    width: 100vw;
+    height: auto;
+    max-height: 140px;
+    flex-direction: row;
+    box-shadow: none;
+    border-radius: 0 0 14px 14px;
+    padding: 7px 3px;
+    overflow-x: auto;
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+  #sidebar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  #sidebar-menu li {
+    margin-bottom: 0;
+    margin-right: 7px;
+    min-width: 110px;
+    flex: 0 0 110px;
+    padding: 8px 8px;
+  }
+  .main-content {
+    min-width: 0;
+    padding: 14px 3vw;
+    margin-left: 0;
+    height: auto;
+  }
+  .cheat-buttons {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    max-width: 98vw;
+    gap: 13px 7px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding: 22px 0 6px 0;
+  font-size: 14px;
+  opacity: 0.90;
+  color: #fff;
+  letter-spacing: 0.1px;
+  text-shadow: 0 1px 8px rgba(70, 30, 150, 0.05);
+    }
